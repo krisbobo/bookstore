@@ -86,7 +86,7 @@ The major tools and languages used are:
 
 Clone this repository to your desired folder:
 
-> https://github.com/krisbobo/maths-magicians.git
+> https://github.com/krisbobo/bookstore.git
 
 ### Install
 
