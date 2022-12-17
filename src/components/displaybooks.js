@@ -6,7 +6,7 @@ const DisplayBooks = (props) => (
     <div className={style.aboutBook}>
       <p>{props}</p>
       <h2>{props}</h2>
-      <a>{props}</a>
+      <a href="#head">{props}</a>
       <div className={style.bookAction}>
         <a href="#comments">Comments</a>
         {' '}
