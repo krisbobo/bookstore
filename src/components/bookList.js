@@ -3,8 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import DisplayBooks from './displaybooks';
 
 export default function BooksList() {
-  // eslint-disable-next-line no-unused-vars
-  const [books, setBooks] = useState([
+  const [books] = useState([
     {
       id: uuidv4(),
       title: 'The Hunger Games',
