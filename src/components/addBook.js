@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './AddBook.module.css';
+import style from './addBook.module.css';
 
 export default function AddBook() {
   return (

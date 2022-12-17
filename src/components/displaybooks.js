@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import style from './displaybooks.module.css';
+import style from './displaybook.module.css';
 
 const DisplayBooks = (props) => (
   <div className={style.book}>
