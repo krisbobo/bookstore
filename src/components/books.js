@@ -3,9 +3,8 @@ import BookInput from './addBook';
 import BookList from './bookList';
 
 const Books = () => (
-  <div>
+  <div className="book-column">
     <BookList />
-    <hr />
     <BookInput />
   </div>
 );
