@@ -33,6 +33,12 @@ nav a {
   color: #2d99f1;
 }
 
+.container #head {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2em;
+}
+
 .items {
   display: flex;
   flex-direction: column;
