@@ -1,36 +1,37 @@
 import React from 'react';
-import style from './displaybook.module.css';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-const DisplayBooks = (props) => (
-  <div className={style.book}>
-    <div className={style.aboutBook}>
-      <p>{props}</p>
-      <h2>{props}</h2>
-      <a href="#head">{props}</a>
-      <div className={style.bookAction}>
-        <a href="#comments">Comments</a>
-        {' '}
-        |
-        <a href="#remove">Remove</a>
-        |
-        <a href="#edit">Edit</a>
+const DisplayBooks = ({ book }) => {
+  const dispatch = useDispatch();
+
+  const handleRemove = (e) => {
+    e.preventDefault();
+    dispatch(removeBook(book.id));
+  };
+
+  return (
+    <div className="items">
+      <h2>{book.bookTitle}</h2>
+      <h3>{book.bookAuthor}</h3>
+      <div className="buttons">
+        <button type="button">Comments</button>
+        <span> | </span>
+        <button type="button" onClick={handleRemove}>Remove</button>
+        <span> | </span>
+        <button type="button">Edit</button>
       </div>
     </div>
+  );
+};
 
-    <div className={style.progress}>
-      <progress value={props} max="100" />
-      <div className={style.progressDetail}>
-        <h4>{props}</h4>
-        <span>Completed</span>
-      </div>
-    </div>
-
-    <div className={style.currentChapter}>
-      <p>Current Chapter</p>
-      <h4>{props}</h4>
-      <button type="button">Update Progress</button>
-    </div>
-  </div>
-);
+DisplayBooks.propTypes = {
+  book: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    bookTitle: PropTypes.string.isRequired,
+    bookAuthor: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default DisplayBooks;
